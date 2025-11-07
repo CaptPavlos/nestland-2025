@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Real Estate Investment Insights 2025-2026 | Nest Land</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Nest Land Brand Variables */
+        :root {
+            --color-primary: #2B5441;
+            --color-accent: #C9A16B;
+            --color-background: #F5F3F0;
+            --color-text-dark: #2C2C2C;
+            --color-text-medium: #5A5A5A;
+            --color-success: #4A7C59;
+            --color-white: #FFFFFF;
+            --color-primary-light: #3A6B55;
+            --color-primary-dark: #1F3D2E;
+            
+            --font-primary: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            
+            --shadow-card: 0 2px 8px rgba(43, 84, 65, 0.08);
+            --shadow-card-hover: 0 4px 16px rgba(43, 84, 65, 0.15);
+            --radius-card: 12px;
+            --radius-small: 8px;
+            
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-background);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.6s ease-out;
+        }
+        
+        .brand-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            font-family: var(--font-primary);
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .header h1 {
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-text-dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        
+        .header .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-medium);
+            font-weight: 400;
+        }
+        
+        /* Key Metrics Row */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .metric-card {
+            background: var(--color-white);
+            border-radius: var(--radius-card);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition-smooth);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .metric-card:nth-child(1) { animation-delay: 0.1s; }
+        .metric-card:nth-child(2) { animation-delay: 0.2s; }
+        .metric-card:nth-child(3) { animation-delay: 0.3s; }
+        .metric-card:nth-child(4) { animation-delay: 0.4s; }
+        
+        .metric-card:hover {
+            box-shadow: var(--shadow-card-hover);
+            transform: translateY(-4px);
+        }
+        
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            font-family: var(--font-primary);
+            margin-bottom: 0.5rem;
+            font-variant-numeric: tabular-nums;
+            line-height: 1;
+        }
+        
+        .metric-label {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            font-family: var(--font-primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .metric-sublabel {
+            font-size: 0.875rem;
+            color: var(--color-text-medium);
+        }
+        
+        .metric-icon {
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        
+        /* Charts Grid */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .chart-card {
+            background: var(--color-white);
+            border-radius: var(--radius-card);
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition-smooth);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .chart-card.visible {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .chart-card:hover {
+            box-shadow: var(--shadow-card-hover);
+        }
+        
+        .chart-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            font-family: var(--font-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--color-primary);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-bottom: 1rem;
+        }
+        
+        .chart-annotation {
+            font-size: 0.875rem;
+            color: var(--color-text-medium);
+            font-style: italic;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        /* Gauge Chart Special Styling */
+        .gauge-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+        }
+        
+        .gauge-display {
+            position: relative;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .gauge-inner {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gauge-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            font-family: var(--font-primary);
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .gauge-label {
+            font-size: 0.875rem;
+            color: var(--color-text-medium);
+            margin-top: 0.5rem;
+        }
+        
+        .gauge-range {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 0.875rem;
+            color: var(--color-text-medium);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 2px solid rgba(43, 84, 65, 0.2);
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .footer-text {
+            color: var(--color-text-medium);
+            font-size: 0.875rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: var(--color-primary);
+            color: var(--color-white);
+            font-family: var(--font-primary);
+            text-decoration: none;
+            border-radius: var(--radius-small);
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-card);
+        }
+        
+        .cta-button:hover {
+            background: var(--color-primary-dark);
+            box-shadow: var(--shadow-card-hover);
+            transform: translateY(-2px);
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                padding: 1.5rem 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .metric-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            .metric-value {
+                font-size: 2.5rem;
+            }
+            
+            .charts-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .chart-card {
+                padding: 1.5rem;
+            }
+            
+            .chart-container {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .metric-value {
+                font-size: 2rem;
+            }
+            
+            .chart-title {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="brand-logo">NEST LAND</div>
+            <h1>Greek Real Estate Investment Insights 2025-2026</h1>
+            <p class="subtitle">Golden Visa &amp; Market Trends Analysis</p>
+        </header>
+        
+        <!-- Key Metrics Row -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">€4.4B<span class="metric-icon">↑</span></div>
+                <div class="metric-label">Golden Visa Capital</div>
+                <div class="metric-sublabel">Since 2022</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">40%</div>
+                <div class="metric-label">Athens Metro Share</div>
+                <div class="metric-sublabel">Transaction Volume</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">35%<span class="metric-icon">↗</span></div>
+                <div class="metric-label">Institutional Capital</div>
+                <div class="metric-sublabel">Rising Participation</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">€200B</div>
+                <div class="metric-label">Southern Europe AUM</div>
+                <div class="metric-sublabel">25% 3-Year Growth</div>
+            </div>
+        </section>
+        
+        <!-- Charts Grid -->
+        <section class="charts-grid">
+            <!-- Chart 1: Golden Visa Thresholds -->
+            <div class="chart-card" data-chart="thresholds">
+                <h3 class="chart-title">Golden Visa Investment Thresholds</h3>
+                <div class="chart-container">
+                    <canvas id="thresholdsChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Chart 2: Capital Flow Timeline -->
+            <div class="chart-card" data-chart="capital">
+                <h3 class="chart-title">Capital Flow Timeline (2022-2024)</h3>
+                <div class="chart-container">
+                    <canvas id="capitalFlowChart"></canvas>
+                </div>
+                <div class="chart-annotation">2024 marked a record year for Golden Visa investments</div>
+            </div>
+            
+            <!-- Chart 3: Regional Distribution -->
+            <div class="chart-card" data-chart="regional">
+                <h3 class="chart-title">Transaction Distribution by Region</h3>
+                <div class="chart-container">
+                    <canvas id="regionalChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Chart 4: Investor Profile -->
+            <div class="chart-card" data-chart="investor">
+                <h3 class="chart-title">Investor Profile Evolution</h3>
+                <div class="chart-container">
+                    <canvas id="investorProfileChart"></canvas>
+                </div>
+                <div class="chart-annotation">Geographic shift: Asia/ME → Western EU/North America</div>
+            </div>
+            
+            <!-- Chart 5: Athens Price Growth -->
+            <div class="chart-card" data-chart="growth">
+                <h3 class="chart-title">Athens Price Growth Forecast</h3>
+                <div class="chart-container">
+                    <canvas id="priceGrowthChart"></canvas>
+                </div>
+                <div class="chart-annotation">Market Maturation Phase</div>
+            </div>
+            
+            <!-- Chart 6: BTR Yield Range -->
+            <div class="chart-card" data-chart="yield">
+                <h3 class="chart-title">Built-to-Rent Yield Range</h3>
+                <div class="gauge-container">
+                    <div class="gauge-display">
+                        <div class="gauge-inner">
+                            <div class="gauge-value">4-6%</div>
+                            <div class="gauge-label">Net Yields</div>
+                        </div>
+                    </div>
+                    <div class="gauge-range" style="width: 240px;">
+                        <span>Min: 4%</span>
+                        <span>Avg: 5%</span>
+                        <span>Max: 6%</span>
+                    </div>
+                </div>
+                <div class="chart-annotation">Stable Income Returns</div>
+            </div>
+            
+            <!-- Chart 7: 2026 Investment Trends -->
+            <div class="chart-card" data-chart="trends">
+                <h3 class="chart-title">2026 Investment Trends</h3>
+                <div class="chart-container">
+                    <canvas id="trendsChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">Data: Nest Land Investment Insights | Updated November 2025</p>
+                <a href="#" class="cta-button">Contact Nest Land</a>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Chart.js Default Configuration
+        Chart.defaults.font.family = "'Open Sans', sans-serif";
+        Chart.defaults.color = '#2C2C2C';
+        Chart.defaults.plugins.legend.display = true;
+        Chart.defaults.plugins.legend.position = 'bottom';
+        Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(43, 84, 65, 0.95)';
+        Chart.defaults.plugins.tooltip.padding = 12;
+        Chart.defaults.plugins.tooltip.cornerRadius = 8;
+        Chart.defaults.plugins.tooltip.titleFont.size = 14;
+        Chart.defaults.plugins.tooltip.bodyFont.size = 13;
+        
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const chartObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const chartName = entry.target.dataset.chart;
+                    if (chartName) {
+                        initializeChart(chartName);
+                    }
+                    chartObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all chart cards
+        document.querySelectorAll('.chart-card').forEach(card => {
+            chartObserver.observe(card);
+        });
+        
+        // Chart initialization tracking
+        const initializedCharts = new Set();
+        
+        function initializeChart(chartName) {
+            if (initializedCharts.has(chartName)) return;
+            initializedCharts.add(chartName);
+            
+            switch(chartName) {
+                case 'thresholds':
+                    createThresholdsChart();
+                    break;
+                case 'capital':
+                    createCapitalFlowChart();
+                    break;
+                case 'regional':
+                    createRegionalChart();
+                    break;
+                case 'investor':
+                    createInvestorProfileChart();
+                    break;
+                case 'growth':
+                    createPriceGrowthChart();
+                    break;
+                case 'trends':
+                    createTrendsChart();
+                    break;
+            }
+        }
+        
+        // Chart 1: Golden Visa Thresholds
+        function createThresholdsChart() {
+            const ctx = document.getElementById('thresholdsChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Previous\nThreshold', 'Prime Zones\n2025', 'Secondary\nMarkets 2025'],
+                    datasets: [{
+                        label: 'Investment Amount (€000s)',
+                        data: [250, 800, 400],
+                        backgroundColor: [
+                            'rgba(90, 90, 90, 0.7)',
+                            'rgba(43, 84, 65, 0.9)',
+                            'rgba(74, 124, 89, 0.8)'
+                        ],
+                        borderColor: [
+                            '#5A5A5A',
+                            '#2B5441',
+                            '#4A7C59'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return '€' + context.parsed.y.toLocaleString() + ',000';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '€' + value + 'k';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(43, 84, 65, 0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Chart 2: Capital Flow Timeline
+        function createCapitalFlowChart() {
+            const ctx = document.getElementById('capitalFlowChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2022', '2023', '2024'],
+                    datasets: [{
+                        label: 'Capital Inflow',
+                        data: [1.2, 1.5, 1.7],
+                        borderColor: '#2B5441',
+                        backgroundColor: 'rgba(43, 84, 65, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 6,
+                        pointBackgroundColor: '#2B5441',
+                        pointBorderColor: '#FFFFFF',
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeInOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return '€' + context.parsed.y.toFixed(1) + 'B';
+                                },
+                                afterLabel: function(context) {
+                                    if (context.label === '2024') {
+                                        return '🏆 Record Year';
+                                    }
+                                    return '';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 2,
+                            ticks: {
+                                callback: function(value) {
+                                    return '€' + value.toFixed(1) + 'B';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(43, 84, 65, 0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Chart 3: Regional Distribution
+        function createRegionalChart() {
+            const ctx = document.getElementById('regionalChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Athens Metro Area',
+                        'Northern Suburbs & Riviera',
+                        'Secondary Markets',
+                        'Other Regions'
+                    ],
+                    datasets: [{
+                        data: [40, 30, 20, 10],
+                        backgroundColor: [
+                            'rgba(43, 84, 65, 0.9)',
+                            'rgba(74, 124, 89, 0.85)',
+                            'rgba(201, 161, 107, 0.8)',
+                            'rgba(90, 90, 90, 0.7)'
+                        ],
+                        borderColor: '#F5F3F0',
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true,
+                        duration: 1500
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: {
+                                    size: 12
+                                },
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Chart 4: Investor Profile
+        function createInvestorProfileChart() {
+            const ctx = document.getElementById('investorProfileChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Investor Type'],
+                    datasets: [
+                        {
+                            label: 'Institutional & Family Office',
+                            data: [35],
+                            backgroundColor: 'rgba(201, 161, 107, 0.9)',
+                            borderColor: '#C9A16B',
+                            borderWidth: 2,
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'Individual Buyers',
+                            data: [65],
+                            backgroundColor: 'rgba(43, 84, 65, 0.85)',
+                            borderColor: '#2B5441',
+                            borderWidth: 2,
+                            borderRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart',
+                        delay: (context) => {
+                            return context.datasetIndex * 300;
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.x + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(43, 84, 65, 0.1)'
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Chart 5: Athens Price Growth
+        function createPriceGrowthChart() {
+            const ctx = document.getElementById('priceGrowthChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['2025 Actual', '2026 Forecast'],
+                    datasets: [{
+                        label: 'Price Growth',
+                        data: [7.0, 4.5],
+                        backgroundColor: [
+                            'rgba(201, 161, 107, 0.85)',
+                            'rgba(74, 124, 89, 0.85)'
+                        ],
+                        borderColor: [
+                            '#C9A16B',
+                            '#4A7C59'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutBounce'
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + '% Growth';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 10,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(43, 84, 65, 0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Chart 7: 2026 Investment Trends
+        function createTrendsChart() {
+            const ctx = document.getElementById('trendsChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Green & Energy-Efficient',
+                        'Built-to-Rent (BTR)',
+                        'Institutional Cross-Border',
+                        'PropTech & AI',
+                        'Policy & EU Funding'
+                    ],
+                    datasets: [{
+                        label: 'Impact Score',
+                        data: [95, 85, 80, 75, 70],
+                        backgroundColor: [
+                            'rgba(43, 84, 65, 0.95)',
+                            'rgba(58, 107, 85, 0.9)',
+                            'rgba(74, 124, 89, 0.85)',
+                            'rgba(201, 161, 107, 0.8)',
+                            'rgba(90, 90, 90, 0.75)'
+                        ],
+                        borderColor: [
+                            '#2B5441',
+                            '#3A6B55',
+                            '#4A7C59',
+                            '#C9A16B',
+                            '#5A5A5A'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart',
+                        delay: (context) => {
+                            return context.dataIndex * 150;
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Impact Score: ' + context.parsed.x + '/100';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value;
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(43, 84, 65, 0.1)'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: {
+                                    size: 11
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
