@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek Real Estate Investment Insights 2025-2026 | Nest Land</title>
+    <title>Golden Visa 2025: Trends &amp; Capital Flow In Greece | Nest Land</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -38,265 +39,482 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: var(--font-body);
             background-color: var(--color-background);
             color: var(--color-text-dark);
-            line-height: 1.6;
+            line-height: 1.8;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         
-        .dashboard {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            z-index: 1000;
+            transition: width 0.1s ease;
         }
         
-        /* Header Section */
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.6s ease-out;
-        }
-        
-        .brand-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            font-family: var(--font-primary);
-            margin-bottom: 1rem;
-            letter-spacing: 0.5px;
-        }
-        
-        .header h1 {
-            font-family: var(--font-primary);
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-text-dark);
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-        }
-        
-        .header .subtitle {
-            font-size: 1.25rem;
-            color: var(--color-text-medium);
-            font-weight: 400;
-        }
-        
-        /* Key Metrics Row */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        
-        .metric-card {
+        /* Header */
+        .article-header {
             background: var(--color-white);
-            border-radius: var(--radius-card);
-            padding: 2rem 1.5rem;
-            box-shadow: var(--shadow-card);
-            transition: var(--transition-smooth);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease-out forwards;
+            padding: 3rem 2rem;
+            border-bottom: 3px solid var(--color-primary);
+            margin-bottom: 3rem;
         }
         
-        .metric-card:nth-child(1) { animation-delay: 0.1s; }
-        .metric-card:nth-child(2) { animation-delay: 0.2s; }
-        .metric-card:nth-child(3) { animation-delay: 0.3s; }
-        .metric-card:nth-child(4) { animation-delay: 0.4s; }
-        
-        .metric-card:hover {
-            box-shadow: var(--shadow-card-hover);
-            transform: translateY(-4px);
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
-        .metric-value {
+        .insight-label {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        .article-title {
             font-size: 3rem;
             font-weight: 700;
-            color: var(--color-primary);
-            font-family: var(--font-primary);
-            margin-bottom: 0.5rem;
-            font-variant-numeric: tabular-nums;
-            line-height: 1;
-        }
-        
-        .metric-label {
-            font-size: 1.125rem;
-            font-weight: 600;
             color: var(--color-text-dark);
             font-family: var(--font-primary);
-            margin-bottom: 0.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
         
-        .metric-sublabel {
-            font-size: 0.875rem;
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
             color: var(--color-text-medium);
         }
         
-        .metric-icon {
-            font-size: 1.5rem;
-            margin-left: 0.5rem;
-            vertical-align: middle;
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
-        /* Charts Grid */
-        .charts-grid {
+        .meta-icon {
+            font-size: 1.125rem;
+        }
+        
+        /* Main Layout */
+        .article-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: 1fr 320px;
+            gap: 3rem;
+            align-items: start;
         }
         
-        .chart-card {
+        .main-content {
             background: var(--color-white);
+            padding: 3rem;
             border-radius: var(--radius-card);
-            padding: 2rem;
             box-shadow: var(--shadow-card);
-            transition: var(--transition-smooth);
+        }
+        
+        /* Typography */
+        .section {
+            margin-bottom: 4rem;
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
         }
         
-        .chart-card.visible {
-            animation: fadeInUp 0.6s ease-out forwards;
+        .section:nth-child(2) {
+            animation-delay: 0.2s;
         }
         
-        .chart-card:hover {
-            box-shadow: var(--shadow-card-hover);
+        .section:nth-child(3) {
+            animation-delay: 0.4s;
         }
         
-        .chart-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--color-text-dark);
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--color-primary);
             font-family: var(--font-primary);
             margin-bottom: 1.5rem;
             padding-bottom: 0.75rem;
-            border-bottom: 2px solid var(--color-primary);
+            border-bottom: 2px solid var(--color-accent);
+            letter-spacing: -0.01em;
+        }
+        
+        .section-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--color-text-dark);
+        }
+        
+        .section-content strong {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        
+        /* Pull Quotes */
+        .pull-quote {
+            background: linear-gradient(135deg, rgba(43, 84, 65, 0.05), rgba(201, 161, 107, 0.05));
+            border-left: 4px solid var(--color-accent);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: var(--radius-small);
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--color-primary-dark);
+            line-height: 1.6;
+        }
+        
+        /* Key Takeaways Box */
+        .key-takeaways {
+            background: rgba(43, 84, 65, 0.05);
+            border: 2px solid var(--color-primary);
+            border-radius: var(--radius-card);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .key-takeaways h4 {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .key-takeaways ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .key-takeaways li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .key-takeaways li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+        
+        /* Regional Patterns Box */
+        .regional-patterns {
+            background: rgba(201, 161, 107, 0.08);
+            border-left: 3px solid var(--color-accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--radius-small);
+        }
+        
+        .regional-patterns h4 {
+            font-family: var(--font-primary);
+            font-size: 1.125rem;
+            color: var(--color-text-dark);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .regional-patterns ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .regional-patterns li {
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+        
+        .regional-patterns li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+        
+        /* Chart Containers */
+        .chart-wrapper {
+            background: var(--color-white);
+            border: 1px solid rgba(43, 84, 65, 0.15);
+            border-radius: var(--radius-card);
+            padding: 2rem;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition-smooth);
+        }
+        
+        .chart-wrapper:hover {
+            box-shadow: var(--shadow-card-hover);
+        }
+        
+        .chart-header {
+            margin-bottom: 1.5rem;
+        }
+        
+        .chart-title {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .chart-subtitle {
+            font-size: 0.9rem;
+            color: var(--color-text-medium);
         }
         
         .chart-container {
             position: relative;
-            height: 300px;
+            height: 350px;
             margin-bottom: 1rem;
         }
         
-        .chart-annotation {
+        .chart-container.tall {
+            height: 400px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            align-self: start;
+        }
+        
+        .stats-card {
+            background: var(--color-white);
+            border-radius: var(--radius-card);
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .stats-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-accent);
+        }
+        
+        .stats-title {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .stats-subtitle {
             font-size: 0.875rem;
             color: var(--color-text-medium);
-            font-style: italic;
-            margin-top: 1rem;
+        }
+        
+        .stat-item {
+            margin-bottom: 2rem;
             text-align: center;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, rgba(43, 84, 65, 0.03), rgba(201, 161, 107, 0.03));
+            border-radius: var(--radius-small);
+            transition: var(--transition-smooth);
         }
         
-        /* Gauge Chart Special Styling */
-        .gauge-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 300px;
+        .stat-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-card);
         }
         
-        .gauge-display {
-            position: relative;
-            width: 240px;
-            height: 240px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .gauge-inner {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: var(--color-white);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .gauge-value {
-            font-size: 3rem;
+        .stat-value {
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--color-primary);
             font-family: var(--font-primary);
-            font-variant-numeric: tabular-nums;
+            line-height: 1;
+            margin-bottom: 0.5rem;
         }
         
-        .gauge-label {
-            font-size: 0.875rem;
-            color: var(--color-text-medium);
-            margin-top: 0.5rem;
+        .stat-label {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin-bottom: 0.25rem;
         }
         
-        .gauge-range {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            font-size: 0.875rem;
+        .stat-sublabel {
+            font-size: 0.8125rem;
             color: var(--color-text-medium);
+            font-style: italic;
         }
         
         /* Footer */
-        .footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            border-top: 2px solid rgba(43, 84, 65, 0.2);
-            margin-top: 3rem;
+        .article-footer {
+            max-width: 1200px;
+            margin: 4rem auto 0;
+            padding: 3rem 2rem;
+            background: var(--color-white);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
         }
         
         .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
         
-        .footer-text {
-            color: var(--color-text-medium);
+        .author-section {
+            text-align: center;
+        }
+        
+        .author-label {
             font-size: 0.875rem;
+            color: var(--color-text-medium);
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-name {
+            font-family: var(--font-primary);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            border-radius: var(--radius-card);
+            color: var(--color-white);
+        }
+        
+        .cta-title {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-text {
+            margin-bottom: 1.5rem;
+            font-size: 1.0625rem;
         }
         
         .cta-button {
             display: inline-block;
-            padding: 0.875rem 2rem;
-            background: var(--color-primary);
-            color: var(--color-white);
-            font-family: var(--font-primary);
+            padding: 1rem 2.5rem;
+            background: var(--color-accent);
+            color: var(--color-text-dark);
             text-decoration: none;
             border-radius: var(--radius-small);
             font-weight: 600;
+            font-family: var(--font-primary);
             transition: var(--transition-smooth);
-            box-shadow: var(--shadow-card);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         
         .cta-button:hover {
-            background: var(--color-primary-dark);
-            box-shadow: var(--shadow-card-hover);
+            background: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .share-section {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(43, 84, 65, 0.15);
+        }
+        
+        .share-label {
+            font-size: 0.875rem;
+            color: var(--color-text-medium);
+            margin-bottom: 1rem;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--color-background);
+            color: var(--color-text-dark);
+            text-decoration: none;
+            border-radius: var(--radius-small);
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(43, 84, 65, 0.2);
+        }
+        
+        .share-button:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
             transform: translateY(-2px);
         }
         
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .read-next {
+            margin-top: 2rem;
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(201, 161, 107, 0.08);
+            border-radius: var(--radius-small);
         }
         
+        .read-next-label {
+            font-size: 0.875rem;
+            color: var(--color-text-medium);
+            margin-bottom: 0.5rem;
+        }
+        
+        .read-next-link {
+            font-family: var(--font-primary);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .read-next-link:hover {
+            color: var(--color-accent);
+        }
+        
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -310,43 +528,76 @@
         
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .charts-grid {
+            .article-container {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .sidebar {
+                position: relative;
+                top: 0;
+                order: -1;
+            }
+            
+            .stats-card {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .stats-header {
+                grid-column: 1 / -1;
             }
         }
         
         @media (max-width: 768px) {
-            .dashboard {
-                padding: 1.5rem 1rem;
-            }
-            
-            .header h1 {
+            .article-title {
                 font-size: 2rem;
             }
             
-            .header .subtitle {
-                font-size: 1rem;
+            .main-content {
+                padding: 2rem;
             }
             
-            .metrics-grid {
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .chart-container {
+                height: 300px;
+            }
+            
+            .chart-container.tall {
+                height: 350px;
+            }
+            
+            .stats-card {
                 grid-template-columns: 1fr;
-                gap: 1rem;
             }
             
-            .metric-card {
-                padding: 1.5rem 1rem;
+            .stat-value {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .article-header {
+                padding: 2rem 1rem;
             }
             
-            .metric-value {
-                font-size: 2.5rem;
+            .article-container {
+                padding: 0 1rem 3rem;
             }
             
-            .charts-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+            .main-content {
+                padding: 1.5rem;
             }
             
-            .chart-card {
+            .article-title {
+                font-size: 1.75rem;
+            }
+            
+            .chart-wrapper {
                 padding: 1.5rem;
             }
             
@@ -355,202 +606,281 @@
             }
         }
         
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.5rem;
+        /* Print Styles */
+        @media print {
+            .reading-progress,
+            .share-section,
+            .cta-section {
+                display: none;
             }
             
-            .metric-value {
-                font-size: 2rem;
+            body {
+                background: white;
             }
             
-            .chart-title {
-                font-size: 1rem;
+            .article-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                page-break-before: always;
             }
         }
     </style>
 </head>
 <body>
-    <div class="dashboard">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="brand-logo">NEST LAND</div>
-            <h1>Greek Real Estate Investment Insights 2025-2026</h1>
-            <p class="subtitle">Golden Visa &amp; Market Trends Analysis</p>
-        </header>
-        
-        <!-- Key Metrics Row -->
-        <section class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-value">€4.4B<span class="metric-icon">↑</span></div>
-                <div class="metric-label">Golden Visa Capital</div>
-                <div class="metric-sublabel">Since 2022</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">40%</div>
-                <div class="metric-label">Athens Metro Share</div>
-                <div class="metric-sublabel">Transaction Volume</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">35%<span class="metric-icon">↗</span></div>
-                <div class="metric-label">Institutional Capital</div>
-                <div class="metric-sublabel">Rising Participation</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">€200B</div>
-                <div class="metric-label">Southern Europe AUM</div>
-                <div class="metric-sublabel">25% 3-Year Growth</div>
-            </div>
-        </section>
-        
-        <!-- Charts Grid -->
-        <section class="charts-grid">
-            <!-- Chart 1: Golden Visa Thresholds -->
-            <div class="chart-card" data-chart="thresholds">
-                <h3 class="chart-title">Golden Visa Investment Thresholds</h3>
-                <div class="chart-container">
-                    <canvas id="thresholdsChart"></canvas>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="readingProgress"></div>
+    
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="header-content">
+            <div class="insight-label">Nest Land – Investment Insight #2</div>
+            <h1 class="article-title">Golden Visa 2025: Trends &amp; Capital Flow In Greece</h1>
+            <div class="article-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">📅</span>
+                    <span>November 2025</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">⏱</span>
+                    <span>8 min read</span>
                 </div>
             </div>
-            
-            <!-- Chart 2: Capital Flow Timeline -->
-            <div class="chart-card" data-chart="capital">
-                <h3 class="chart-title">Capital Flow Timeline (2022-2024)</h3>
-                <div class="chart-container">
-                    <canvas id="capitalFlowChart"></canvas>
-                </div>
-                <div class="chart-annotation">2024 marked a record year for Golden Visa investments</div>
-            </div>
-            
-            <!-- Chart 3: Regional Distribution -->
-            <div class="chart-card" data-chart="regional">
-                <h3 class="chart-title">Transaction Distribution by Region</h3>
-                <div class="chart-container">
-                    <canvas id="regionalChart"></canvas>
-                </div>
-            </div>
-            
-            <!-- Chart 4: Investor Profile -->
-            <div class="chart-card" data-chart="investor">
-                <h3 class="chart-title">Investor Profile Evolution</h3>
-                <div class="chart-container">
-                    <canvas id="investorProfileChart"></canvas>
-                </div>
-                <div class="chart-annotation">Geographic shift: Asia/ME → Western EU/North America</div>
-            </div>
-            
-            <!-- Chart 5: Athens Price Growth -->
-            <div class="chart-card" data-chart="growth">
-                <h3 class="chart-title">Athens Price Growth Forecast</h3>
-                <div class="chart-container">
-                    <canvas id="priceGrowthChart"></canvas>
-                </div>
-                <div class="chart-annotation">Market Maturation Phase</div>
-            </div>
-            
-            <!-- Chart 6: BTR Yield Range -->
-            <div class="chart-card" data-chart="yield">
-                <h3 class="chart-title">Built-to-Rent Yield Range</h3>
-                <div class="gauge-container">
-                    <div class="gauge-display">
-                        <div class="gauge-inner">
-                            <div class="gauge-value">4-6%</div>
-                            <div class="gauge-label">Net Yields</div>
+        </div>
+    </header>
+    
+    <!-- Main Container -->
+    <div class="article-container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Section 1: Trends -->
+            <article class="section">
+                <h2 class="section-title">Trends: The Evolving Landscape of the Greek Golden Visa</h2>
+                <div class="section-content">
+                    <p>The Greek Golden Visa Program continues to stand as one of Europe's most competitive residency-by-investment schemes in 2025, despite tightening criteria in other EU countries. Recent legislative changes introduced higher minimum investment thresholds — from €250,000 to up to €800,000 in prime zones such as Athens and the Aegean islands — aim to ensure more sustainable growth in the real estate sector.</p>
+                    
+                    <p>The market has entered a period of stabilization after the "pre-deadline rush" of 2023–2024, when investors moved quickly to secure properties under the lower threshold. Now, the program is evolving toward more strategic, long-term investment opportunities, favoring projects that combine residential appeal with rental yield and ESG credentials.</p>
+                    
+                    <div class="pull-quote">
+                        "The Greek Golden Visa is evolving toward more strategic, long-term investment opportunities, favoring projects that combine residential appeal with rental yield and ESG credentials."
+                    </div>
+                    
+                    <p>At the same time, international demand remains diverse. Interest is shifting from Asia and the Middle East toward Western Europe and North America, as investors seek EU mobility and inflation-resilient assets. The Greek program benefits from its simplicity, low bureaucratic barrier, and direct connection to real estate value creation.</p>
+                    
+                    <!-- Investment Thresholds Chart -->
+                    <div class="chart-wrapper">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Golden Visa Investment Thresholds</h3>
+                            <p class="chart-subtitle">Legislative changes reflect market evolution</p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="thresholdsChart"></canvas>
                         </div>
                     </div>
-                    <div class="gauge-range" style="width: 240px;">
-                        <span>Min: 4%</span>
-                        <span>Avg: 5%</span>
-                        <span>Max: 6%</span>
+                    
+                    <!-- Regional Distribution Chart -->
+                    <div class="chart-wrapper">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Regional Distribution of Investments</h3>
+                            <p class="chart-subtitle">Athens Metro continues to dominate transaction volume</p>
+                        </div>
+                        <div class="chart-container tall">
+                            <canvas id="regionalChart"></canvas>
+                        </div>
                     </div>
                 </div>
-                <div class="chart-annotation">Stable Income Returns</div>
-            </div>
+            </article>
             
-            <!-- Chart 7: 2026 Investment Trends -->
-            <div class="chart-card" data-chart="trends">
-                <h3 class="chart-title">2026 Investment Trends</h3>
-                <div class="chart-container">
-                    <canvas id="trendsChart"></canvas>
+            <!-- Section 2: Capital Flow -->
+            <article class="section">
+                <h2 class="section-title">Capital Flow: Data and Investment Dynamics</h2>
+                <div class="section-content">
+                    <p>According to industry estimates, total capital inflow from Golden Visa investments has exceeded €4.4 billion since 2022, with 2024 marking a record year in both applications and property transactions. While the first half of 2025 saw a moderate decline (-16% YoY in applications), transaction values remain strong due to the higher investment thresholds.</p>
+                    
+                    <!-- Capital Flow Timeline Chart -->
+                    <div class="chart-wrapper">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Capital Flow Timeline (2022-2024)</h3>
+                            <p class="chart-subtitle">Total capital inflow exceeding €4.4 billion</p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="capitalFlowChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="regional-patterns">
+                        <h4>Regional patterns:</h4>
+                        <ul>
+                            <li><strong>Athens Metropolitan Area</strong> continues to absorb over 40% of all Golden Visa transactions.</li>
+                            <li><strong>Northern Suburbs &amp; Riviera</strong> show increasing demand for high-yield assets and renovation projects.</li>
+                            <li><strong>Secondary markets</strong> — Patras, Kalamata, Ioannina — are emerging as attractive options below the €400k threshold.</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>Investor profiles:</strong> the average Golden Visa investor in 2025 allocates €520k–€600k in Greek real estate, with a growing portion (&gt;35%) coming from institutional and family-office funds rather than individual buyers.</p>
+                    
+                    <p>The program's steady capital flow has supported local construction activity and stimulated urban revitalization, particularly in Athens and Thessaloniki. However, the market is now more discerning: investors prioritize asset quality, location potential, and legal transparency over short-term price gains.</p>
+                </div>
+            </article>
+            
+            <!-- Section 3: Implications -->
+            <article class="section">
+                <h2 class="section-title">Implications for Investors and the Nest Land Perspective</h2>
+                <div class="section-content">
+                    <p>For international investors, 2025 marks a turning point — the Golden Visa is no longer just a residency vehicle but a gateway to strategic real estate portfolio expansion within the EU.</p>
+                    
+                    <div class="key-takeaways">
+                        <h4>Key takeaways:</h4>
+                        <ul>
+                            <li>Greece offers a rare blend of accessibility, value growth, and long-term stability.</li>
+                            <li>The revised thresholds create a two-tier market: premium urban zones and emerging regional hubs.</li>
+                            <li>Institutional interest and structured fund participation are rising, driving professionalization of the sector.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Investor Profile Chart -->
+                    <div class="chart-wrapper">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Investor Profile Evolution</h3>
+                            <p class="chart-subtitle">Institutional capital rising: 35% of total investment</p>
+                        </div>
+                        <div class="chart-container tall">
+                            <canvas id="investorProfileChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <p>From Nest Land's perspective, these shifts reinforce the company's investment philosophy — targeting sustainable developments with real asset value and strong ESG foundations. As a real estate investment platform, Nest Land focuses on projects that align international capital with Greece's urban renewal and sustainability agenda.</p>
+                    
+                    <div class="pull-quote">
+                        "The coming year will reward disciplined investors who combine strategic location choice, due diligence, and a long-term view of Greek real estate."
+                    </div>
+                    
+                    <p>The coming year will reward disciplined investors who combine strategic location choice, due diligence, and a long-term view of Greek real estate. With expert guidance and transparent management, the Golden Visa remains not only a pathway to residency but a gateway to real asset value creation in one of Europe's most promising markets.</p>
+                </div>
+            </article>
+        </main>
+        
+        <!-- Sidebar with Key Statistics -->
+        <aside class="sidebar">
+            <div class="stats-card">
+                <div class="stats-header">
+                    <h3 class="stats-title">Key Statistics</h3>
+                    <p class="stats-subtitle">At a Glance</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-value">€4.4B</div>
+                    <div class="stat-label">Total Capital Inflow</div>
+                    <div class="stat-sublabel">Since 2022</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-value">40%</div>
+                    <div class="stat-label">Athens Metro Share</div>
+                    <div class="stat-sublabel">Transaction Volume</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-value">35%</div>
+                    <div class="stat-label">Institutional Investors</div>
+                    <div class="stat-sublabel">Rising Participation</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-value">€520k-€600k</div>
+                    <div class="stat-label">Average Investment</div>
+                    <div class="stat-sublabel">2025</div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p class="footer-text">Data: Nest Land Investment Insights | Updated November 2025</p>
-                <a href="#" class="cta-button">Contact Nest Land</a>
-            </div>
-        </footer>
+        </aside>
     </div>
+    
+    <!-- Footer -->
+    <footer class="article-footer">
+        <div class="footer-content">
+            <!-- Author Section -->
+            <div class="author-section">
+                <div class="author-label">Article by</div>
+                <div class="author-name">Nest Land Research Team</div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h3 class="cta-title">Ready to Explore Investment Opportunities?</h3>
+                <p class="cta-text">Connect with our team for personalized consultation on Greek real estate investments and Golden Visa opportunities.</p>
+                <a href="#" class="cta-button">Contact Us for Investment Consultation</a>
+            </div>
+            
+            <!-- Share Section -->
+            <div class="share-section">
+                <div class="share-label">Share this article</div>
+                <div class="share-buttons">
+                    <a href="#" class="share-button">
+                        <span>📧</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="#" class="share-button">
+                        <span>🔗</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="share-button">
+                        <span>🐦</span>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="share-button">
+                        <span>💬</span>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Read Next -->
+            <div class="read-next">
+                <div class="read-next-label">Read Next</div>
+                <a href="#" class="read-next-link">Market Analysis: Athens Real Estate Outlook 2026 →</a>
+            </div>
+        </div>
+    </footer>
     
     <script>
         // Chart.js Default Configuration
         Chart.defaults.font.family = "'Open Sans', sans-serif";
         Chart.defaults.color = '#2C2C2C';
-        Chart.defaults.plugins.legend.display = true;
-        Chart.defaults.plugins.legend.position = 'bottom';
         Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(43, 84, 65, 0.95)';
         Chart.defaults.plugins.tooltip.padding = 12;
         Chart.defaults.plugins.tooltip.cornerRadius = 8;
         Chart.defaults.plugins.tooltip.titleFont.size = 14;
         Chart.defaults.plugins.tooltip.bodyFont.size = 13;
         
-        // Intersection Observer for scroll animations
+        // Reading Progress Bar
+        function updateReadingProgress() {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+            
+            document.getElementById('readingProgress').style.width = scrollPercent + '%';
+        }
+        
+        window.addEventListener('scroll', updateReadingProgress);
+        
+        // Intersection Observer for chart animations
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
         };
         
         const chartObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    const chartName = entry.target.dataset.chart;
-                    if (chartName) {
-                        initializeChart(chartName);
-                    }
-                    chartObserver.unobserve(entry.target);
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
         
-        // Observe all chart cards
-        document.querySelectorAll('.chart-card').forEach(card => {
-            chartObserver.observe(card);
-        });
-        
-        // Chart initialization tracking
-        const initializedCharts = new Set();
-        
-        function initializeChart(chartName) {
-            if (initializedCharts.has(chartName)) return;
-            initializedCharts.add(chartName);
-            
-            switch(chartName) {
-                case 'thresholds':
-                    createThresholdsChart();
-                    break;
-                case 'capital':
-                    createCapitalFlowChart();
-                    break;
-                case 'regional':
-                    createRegionalChart();
-                    break;
-                case 'investor':
-                    createInvestorProfileChart();
-                    break;
-                case 'growth':
-                    createPriceGrowthChart();
-                    break;
-                case 'trends':
-                    createTrendsChart();
-                    break;
-            }
-        }
-        
-        // Chart 1: Golden Visa Thresholds
+        // Chart 1: Investment Thresholds (Bar Chart)
         function createThresholdsChart() {
             const ctx = document.getElementById('thresholdsChart');
             if (!ctx) return;
@@ -558,22 +888,15 @@
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Previous\nThreshold', 'Prime Zones\n2025', 'Secondary\nMarkets 2025'],
+                    labels: ['Previous Threshold', 'Prime Zones (Athens/Aegean)', 'Secondary Markets'],
                     datasets: [{
-                        label: 'Investment Amount (€000s)',
+                        label: 'Investment Threshold (€1000s)',
                         data: [250, 800, 400],
-                        backgroundColor: [
-                            'rgba(90, 90, 90, 0.7)',
-                            'rgba(43, 84, 65, 0.9)',
-                            'rgba(74, 124, 89, 0.8)'
-                        ],
-                        borderColor: [
-                            '#5A5A5A',
-                            '#2B5441',
-                            '#4A7C59'
-                        ],
+                        backgroundColor: ['#C9A16B', '#2B5441', '#3A6B55'],
+                        borderColor: ['#C9A16B', '#2B5441', '#3A6B55'],
                         borderWidth: 2,
-                        borderRadius: 6
+                        borderRadius: 6,
+                        hoverBackgroundColor: ['#D4B07D', '#3A6B55', '#4A7C59']
                     }]
                 },
                 options: {
@@ -601,372 +924,16 @@
                             ticks: {
                                 callback: function(value) {
                                     return '€' + value + 'k';
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(43, 84, 65, 0.1)'
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        
-        // Chart 2: Capital Flow Timeline
-        function createCapitalFlowChart() {
-            const ctx = document.getElementById('capitalFlowChart');
-            if (!ctx) return;
-            
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['2022', '2023', '2024'],
-                    datasets: [{
-                        label: 'Capital Inflow',
-                        data: [1.2, 1.5, 1.7],
-                        borderColor: '#2B5441',
-                        backgroundColor: 'rgba(43, 84, 65, 0.1)',
-                        borderWidth: 3,
-                        fill: true,
-                        tension: 0.4,
-                        pointRadius: 6,
-                        pointBackgroundColor: '#2B5441',
-                        pointBorderColor: '#FFFFFF',
-                        pointBorderWidth: 2,
-                        pointHoverRadius: 8
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    animation: {
-                        duration: 2000,
-                        easing: 'easeInOutQuart'
-                    },
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return '€' + context.parsed.y.toFixed(1) + 'B';
                                 },
-                                afterLabel: function(context) {
-                                    if (context.label === '2024') {
-                                        return '🏆 Record Year';
-                                    }
-                                    return '';
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 2,
-                            ticks: {
-                                callback: function(value) {
-                                    return '€' + value.toFixed(1) + 'B';
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(43, 84, 65, 0.1)'
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        
-        // Chart 3: Regional Distribution
-        function createRegionalChart() {
-            const ctx = document.getElementById('regionalChart');
-            if (!ctx) return;
-            
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: [
-                        'Athens Metro Area',
-                        'Northern Suburbs & Riviera',
-                        'Secondary Markets',
-                        'Other Regions'
-                    ],
-                    datasets: [{
-                        data: [40, 30, 20, 10],
-                        backgroundColor: [
-                            'rgba(43, 84, 65, 0.9)',
-                            'rgba(74, 124, 89, 0.85)',
-                            'rgba(201, 161, 107, 0.8)',
-                            'rgba(90, 90, 90, 0.7)'
-                        ],
-                        borderColor: '#F5F3F0',
-                        borderWidth: 3
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    animation: {
-                        animateRotate: true,
-                        animateScale: true,
-                        duration: 1500
-                    },
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                padding: 15,
                                 font: {
-                                    size: 12
-                                },
-                                usePointStyle: true,
-                                pointStyle: 'circle'
-                            }
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.label + ': ' + context.parsed + '%';
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        
-        // Chart 4: Investor Profile
-        function createInvestorProfileChart() {
-            const ctx = document.getElementById('investorProfileChart');
-            if (!ctx) return;
-            
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Investor Type'],
-                    datasets: [
-                        {
-                            label: 'Institutional & Family Office',
-                            data: [35],
-                            backgroundColor: 'rgba(201, 161, 107, 0.9)',
-                            borderColor: '#C9A16B',
-                            borderWidth: 2,
-                            borderRadius: 6
-                        },
-                        {
-                            label: 'Individual Buyers',
-                            data: [65],
-                            backgroundColor: 'rgba(43, 84, 65, 0.85)',
-                            borderColor: '#2B5441',
-                            borderWidth: 2,
-                            borderRadius: 6
-                        }
-                    ]
-                },
-                options: {
-                    indexAxis: 'y',
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    animation: {
-                        duration: 1500,
-                        easing: 'easeOutQuart',
-                        delay: (context) => {
-                            return context.datasetIndex * 300;
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                padding: 15,
-                                font: {
-                                    size: 12
-                                }
-                            }
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.dataset.label + ': ' + context.parsed.x + '%';
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            stacked: true,
-                            max: 100,
-                            ticks: {
-                                callback: function(value) {
-                                    return value + '%';
+                                    size: 11
                                 }
                             },
                             grid: {
-                                color: 'rgba(43, 84, 65, 0.1)'
-                            }
-                        },
-                        y: {
-                            stacked: true,
-                            grid: {
-                                display: false
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        
-        // Chart 5: Athens Price Growth
-        function createPriceGrowthChart() {
-            const ctx = document.getElementById('priceGrowthChart');
-            if (!ctx) return;
-            
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['2025 Actual', '2026 Forecast'],
-                    datasets: [{
-                        label: 'Price Growth',
-                        data: [7.0, 4.5],
-                        backgroundColor: [
-                            'rgba(201, 161, 107, 0.85)',
-                            'rgba(74, 124, 89, 0.85)'
-                        ],
-                        borderColor: [
-                            '#C9A16B',
-                            '#4A7C59'
-                        ],
-                        borderWidth: 2,
-                        borderRadius: 6
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    animation: {
-                        duration: 1500,
-                        easing: 'easeOutBounce'
-                    },
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.parsed.y + '% Growth';
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 10,
-                            ticks: {
-                                callback: function(value) {
-                                    return value + '%';
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(43, 84, 65, 0.1)'
+                                color: 'rgba(43, 84, 65, 0.08)'
                             }
                         },
                         x: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        
-        // Chart 7: 2026 Investment Trends
-        function createTrendsChart() {
-            const ctx = document.getElementById('trendsChart');
-            if (!ctx) return;
-            
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'Green & Energy-Efficient',
-                        'Built-to-Rent (BTR)',
-                        'Institutional Cross-Border',
-                        'PropTech & AI',
-                        'Policy & EU Funding'
-                    ],
-                    datasets: [{
-                        label: 'Impact Score',
-                        data: [95, 85, 80, 75, 70],
-                        backgroundColor: [
-                            'rgba(43, 84, 65, 0.95)',
-                            'rgba(58, 107, 85, 0.9)',
-                            'rgba(74, 124, 89, 0.85)',
-                            'rgba(201, 161, 107, 0.8)',
-                            'rgba(90, 90, 90, 0.75)'
-                        ],
-                        borderColor: [
-                            '#2B5441',
-                            '#3A6B55',
-                            '#4A7C59',
-                            '#C9A16B',
-                            '#5A5A5A'
-                        ],
-                        borderWidth: 2,
-                        borderRadius: 6
-                    }]
-                },
-                options: {
-                    indexAxis: 'y',
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    animation: {
-                        duration: 1500,
-                        easing: 'easeOutQuart',
-                        delay: (context) => {
-                            return context.dataIndex * 150;
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return 'Impact Score: ' + context.parsed.x + '/100';
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            beginAtZero: true,
-                            max: 100,
-                            ticks: {
-                                callback: function(value) {
-                                    return value;
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(43, 84, 65, 0.1)'
-                            }
-                        },
-                        y: {
                             grid: {
                                 display: false
                             },
@@ -980,6 +947,252 @@
                 }
             });
         }
+        
+        // Chart 2: Capital Flow Timeline (Line Chart)
+        function createCapitalFlowChart() {
+            const ctx = document.getElementById('capitalFlowChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2022', '2023', '2024'],
+                    datasets: [{
+                        label: 'Capital Inflow (€B)',
+                        data: [1.2, 1.5, 1.7],
+                        borderColor: '#2B5441',
+                        backgroundColor: 'rgba(43, 84, 65, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
+                        pointBackgroundColor: '#2B5441',
+                        pointBorderColor: '#F5F3F0',
+                        pointBorderWidth: 3,
+                        pointHoverBackgroundColor: '#C9A16B',
+                        pointHoverBorderColor: '#2B5441'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return '€' + context.parsed.y.toFixed(1) + ' billion';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 2,
+                            ticks: {
+                                callback: function(value) {
+                                    return '€' + value + 'B';
+                                },
+                                font: {
+                                    size: 11
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(43, 84, 65, 0.08)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: {
+                                    size: 11,
+                                    weight: '600'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Chart 3: Regional Distribution (Donut Chart)
+        function createRegionalChart() {
+            const ctx = document.getElementById('regionalChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Athens Metro', 'Northern Suburbs & Riviera', 'Secondary Markets', 'Other Regions'],
+                    datasets: [{
+                        data: [40, 30, 20, 10],
+                        backgroundColor: ['#2B5441', '#C9A16B', '#3A6B55', '#5A5A5A'],
+                        borderColor: '#F5F3F0',
+                        borderWidth: 4,
+                        hoverOffset: 15,
+                        hoverBorderWidth: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true,
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: {
+                                    size: 12,
+                                    weight: '500',
+                                    family: "'Montserrat', sans-serif"
+                                },
+                                usePointStyle: true,
+                                pointStyle: 'circle',
+                                boxWidth: 12,
+                                boxHeight: 12,
+                                generateLabels: function(chart) {
+                                    const data = chart.data;
+                                    return data.labels.map((label, i) => {
+                                        const value = data.datasets[0].data[i];
+                                        const color = data.datasets[0].backgroundColor[i];
+                                        return {
+                                            text: `${label} (${value}%)`,
+                                            fillStyle: color,
+                                            hidden: false,
+                                            index: i
+                                        };
+                                    });
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    return `${label}: ${value}% of transactions`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        }
+        
+        // Chart 4: Investor Profile (Donut Chart)
+        function createInvestorProfileChart() {
+            const ctx = document.getElementById('investorProfileChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Institutional & Family Office', 'Individual Buyers'],
+                    datasets: [{
+                        data: [35, 65],
+                        backgroundColor: ['#C9A16B', '#2B5441'],
+                        borderColor: '#F5F3F0',
+                        borderWidth: 4,
+                        hoverOffset: 15,
+                        hoverBorderWidth: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true,
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: {
+                                    size: 12,
+                                    weight: '500',
+                                    family: "'Montserrat', sans-serif"
+                                },
+                                usePointStyle: true,
+                                pointStyle: 'circle',
+                                boxWidth: 12,
+                                boxHeight: 12,
+                                generateLabels: function(chart) {
+                                    const data = chart.data;
+                                    const trends = ['Rising', 'Declining share'];
+                                    return data.labels.map((label, i) => {
+                                        const value = data.datasets[0].data[i];
+                                        const color = data.datasets[0].backgroundColor[i];
+                                        const trend = trends[i];
+                                        return {
+                                            text: `${label} (${value}%) - ${trend}`,
+                                            fillStyle: color,
+                                            hidden: false,
+                                            index: i
+                                        };
+                                    });
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    const trend = context.dataIndex === 0 ? 'Rising' : 'Declining share';
+                                    return [
+                                        `${label}`,
+                                        `Share: ${value}%`,
+                                        `Trend: ${trend}`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        }
+        
+        // Initialize all charts when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            // Add fade-in transition to chart wrappers
+            const chartWrappers = document.querySelectorAll('.chart-wrapper');
+            chartWrappers.forEach(wrapper => {
+                wrapper.style.opacity = '0';
+                wrapper.style.transform = 'translateY(20px)';
+                wrapper.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                chartObserver.observe(wrapper);
+            });
+            
+            // Create all charts with slight delay for better UX
+            setTimeout(() => {
+                createThresholdsChart();
+                createCapitalFlowChart();
+                createRegionalChart();
+                createInvestorProfileChart();
+            }, 300);
+        });
     </script>
 </body>
 </html>
